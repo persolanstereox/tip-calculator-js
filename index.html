@@ -1,0 +1,48 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="logo">
+      <img src="images/logo.svg" alt="logo" />
+    </header>
+    <main>
+      <section class="usersBills">
+        <div class="left-container">
+          <div class="Bill">
+            <label for="inputForBill">Bill</label>
+            <input id="inputForBill" type="number" placeholder=" " aria />
+            <img src="images/icon-dollar.svg" alt="dollar-icon" />
+          </div>
+          <div class="selectTip">
+            <span>Select tip %</span>
+            <div class="btnContainer">
+              <button class="btnBillPercantage">5%</button>
+              <button class="btnBillPercantage">10%</button>
+              <button class="btnBillPercantage">15%</button>
+              <button class="btnBillPercantage">25%</button>
+              <button class="btnBillPercantage">50%</button>
+              <input id="customBill" type="number">
+            </div>
+          </div>
+          <div class="numberOfPeople">
+            <label for="inputNumberOfPeople">Number of people</label>
+            <input
+              id="inputNumberOfPeople"
+              type="number"
+              placeholder=" "
+              aria
+            />
+            <img src="images/icon-person.svg" alt="personIcon" />
+          </div>
+        </div>
+      </section>
+      <section class="coutingBills"></section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
