@@ -1,119 +1,177 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 :root {
+  /* Primary */
 
-/* Primary */
+  --Strong-cyan: hsl(172, 67%, 45%);
 
---Strong-cyan: hsl(172, 67%, 45%);
+  /* Neutral */
 
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
 
-/* Neutral */
-
---Very-dark-cyan: hsl(183, 100%, 15%);
---Dark-grayish-cyan: hsl(186, 14%, 43%);
---Grayish-cyan: hsl(184, 14%, 56%);
---Light-grayish-cyan: hsl(185, 41%, 84%);
---Very-light-grayish-cyan: hsl(189, 41%, 97%);
---White: hsl(0, 0%, 100%);
-
-
---font-size: 24px;
---font-weight: 700;
-
+  --font-size: 24px;
+  --font-weight: 700;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-
 
 body {
-    height: 100vh;
-    width: 100vw;
-    font-family: 'Space Mono', monospace;
-    font-size: var(--font-size);
-    font-weight: var(--font-weight);
-    background-color: var(--Light-grayish-cyan);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Space Mono', monospace;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  background-color: var(--Light-grayish-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5%;
 }
 header {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 main {
-    min-width: 50%;
-    /* height: 55%; */
-    display: flex;
-    border-radius: 25px;
-    background-color: var(--White);
-    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
-
+  min-width: 50%;
+  /* height: 55%; */
+  display: flex;
+  border-radius: 25px;
+  background-color: var(--White);
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
 }
 section {
-    width: 50%;
-    height: 100%;
-    padding: 40px 10px 40px 40px;
+  width: 50%;
+  height: 100%;
 }
-/* .left-container {
-    /* border: solid black 1px; 
-} */
-.Bill, .numberOfPeople {
-    position: relative;
+.usersBills {
+  padding: 40px 10px 40px 40px;
 }
-.selectTip, .numberOfPeople {
-    margin-top: 2rem;
+
+.Bill,
+.numberOfPeople {
+  position: relative;
+}
+.selectTip,
+.numberOfPeople {
+  margin-top: 2rem;
 }
 input {
-    text-align: right;
-    background-color: var(--Very-light-grayish-cyan);
-    margin-top: .3rem;
-    /* transition: width 2s; */
+  text-align: right;
+  background-color: var(--Very-light-grayish-cyan);
+  margin-top: 0.3rem;
+  /* transition: width 2s; */
 }
 input:focus {
-    outline-color: var(--Strong-cyan);
-    /* width: 60%; */
+  outline-color: var(--Strong-cyan);
+  /* width: 60%; */
 }
-input, button {
-    cursor: pointer;
-    border-radius: 5px;
-    border: none;
-    font-family: 'Space Mono', monospace;
+input,
+button {
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  font-family: 'Space Mono', monospace;
+}
+label,
+span, h5 {
+  font-size: 14px;
+  font-weight: 700;
 }
 label, span {
-    font-size: 14px;
-    color: var(--Very-dark-cyan);
-    font-weight: 700;
+  color: var(--Dark-grayish-cyan);
 }
-.Bill input, .numberOfPeople input{
-    height: 2.5rem;
-    border-radius: 5px;
-    width: 100%;
-    
+.Bill input,
+.numberOfPeople input {
+  height: 2.5rem;
+  border-radius: 5px;
+  width: 100%;
+  color: var(--Dark-grayish-cyan);
+  font-weight: var(--font-weight);
+  font-size: 18px
 }
 .btnContainer {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-.btnBillPercantage, #customBill {
-    width: 30%;
-    height: 2.3rem;
-    margin-top: .7rem;
-    font-size: 18px;
-    
+
+.btnBillPercantage,
+#customTip {
+  width: 30%;
+  height: 2.3rem;
+  margin-top: 0.7rem;
+  font-size: 18px;
 }
 .btnBillPercantage {
-    background-color: var(--Very-dark-cyan);
-    color: var(--White);
+  background-color: var(--Very-dark-cyan);
+  color: var(--White);
+  transition: all 0.4s;
 }
-.Bill img, .numberOfPeople img {
-    position: absolute;
-    left: 5%;
-    top: 58%;
+.btnBillPercantage:focus {
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan)
 }
- 
+.Bill img,
+.numberOfPeople img {
+  position: absolute;
+  left: 5%;
+  top: 58%;
+}
+.coutingBills {
+  padding: 40px 40px 40px 10px;
+}
+.right-container {
+  width: 100%;
+  height: 100%;
+  background-color: var(--Very-dark-cyan);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+.tipAmountContainer {
+  display:  flex;
+  justify-content: space-between;
+}
+.tipAmount {
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+h5 {
+  color: var(--White);
+}
+p {
+  font-size: 10px;
+  color: var(--Grayish-cyan);
+}
+.tipACont2 {
+  margin-top: 1rem;
+}
+h2 {
+  color: var(--Strong-cyan);
+}
+.reset {
+  width: 100%;
+  height: 2.3rem;
+  margin-top: 6rem;
+  opacity: 0.2;
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+  transition: all 0.4s;
+  
+
+  
+} 
+.reset:hover {
+  background-color: var(--Strong-cyan);
+  opacity: 1;
+ } 
