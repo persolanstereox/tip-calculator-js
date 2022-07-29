@@ -15,7 +15,7 @@ for(let i =0; i < percantageBtns.length; i++) {
         percantageBtns[i].value = percantageBtns[i-1].value + percantageBtns[i-2].value
     })
 }
-console.log(percantageBtns[2].value);
+console.log(percantageBtns[3].value);
 
 function calculateTip() {
 
