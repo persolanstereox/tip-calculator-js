@@ -10,12 +10,20 @@ bill.value = 0;
 numberOfPeople.value = 0;
 customTip.value = 0;
 
-for(let i =0; i < percantageBtns.length; i++) {
+
+for(let i = 0; i < percantageBtns.length; i++) {
     percantageBtns[i].addEventListener('click', function() {
-        percantageBtns[i].value = percantageBtns[i-1].value + percantageBtns[i-2].value
+       if(i<3) {
+       percantageBtns[i].value =  tip * (i+1);
+       } else if(i === 3) {
+        percantageBtns[i].value =  tip * 5;
+       } else {
+        percantageBtns[i].value = tip * 10;
+       }
+    //    tip = percantageBtns[i].value;
     })
 }
-console.log(percantageBtns[3].value);
+
 
 function calculateTip() {
 
