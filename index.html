@@ -26,11 +26,15 @@
               <button class="btnBillPercantage">15%</button>
               <button class="btnBillPercantage">25%</button>
               <button class="btnBillPercantage">50%</button>
-              <input id="customTip" type="number">
+              <input id="customTip" type="number" />
             </div>
           </div>
           <div class="numberOfPeople">
-            <label for="inputNumberOfPeople">Number of people</label>
+            <div class="labelContainer">
+              <label for="inputNumberOfPeople">Number of people</label>
+              <span class="whenZero hidden">Can't be zero</span>
+            </div>
+
             <input
               id="inputNumberOfPeople"
               type="number"

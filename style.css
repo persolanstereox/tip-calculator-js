@@ -41,8 +41,7 @@ header {
 }
 
 main {
-  min-width: 50%;
-  /* height: 55%; */
+  min-width: 55%;
   display: flex;
   border-radius: 25px;
   background-color: var(--White);
@@ -51,6 +50,9 @@ main {
 section {
   width: 50%;
   height: 100%;
+}
+.hidden {
+  display: none;
 }
 .usersBills {
   padding: 40px 10px 40px 40px;
@@ -68,11 +70,17 @@ input {
   text-align: right;
   background-color: var(--Very-light-grayish-cyan);
   margin-top: 0.3rem;
-  /* transition: width 2s; */
+  color: var(--Dark-grayish-cyan);
+  padding-right: 5%;
+  
 }
 input:focus {
-  outline-color: var(--Strong-cyan);
-  /* width: 60%; */
+  border:  solid  2px blue;
+  /* border-color: var(--Grayish-cyan); */
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 input,
 button {
@@ -82,11 +90,13 @@ button {
   font-family: 'Space Mono', monospace;
 }
 label,
-span, h5 {
+span,
+h5 {
   font-size: 14px;
   font-weight: 700;
 }
-label, span {
+label,
+span {
   color: var(--Dark-grayish-cyan);
 }
 .Bill input,
@@ -94,9 +104,8 @@ label, span {
   height: 2.5rem;
   border-radius: 5px;
   width: 100%;
-  color: var(--Dark-grayish-cyan);
   font-weight: var(--font-weight);
-  font-size: 18px
+  font-size: 18px;
 }
 .btnContainer {
   display: flex;
@@ -116,15 +125,32 @@ label, span {
   color: var(--White);
   transition: all 0.4s;
 }
-.btnBillPercantage:focus {
+/* .btnBillPercantage:focus  {
   background-color: var(--Strong-cyan);
-  color: var(--Very-dark-cyan)
+  color: var(--Very-dark-cyan);
+} */
+.btnChoosen {
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
 }
 .Bill img,
 .numberOfPeople img {
   position: absolute;
   left: 5%;
   top: 58%;
+}
+.labelContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.labelContainer span {
+  color: rgba(229, 51, 16, 0.796);
+}
+.outlineRed {
+  border:   rgba(229, 51, 16, 0.796) solid 2px;
+}
+.outlineRed:focus {
+  outline-color:  rgba(229, 51, 16, 0.796);
 }
 .coutingBills {
   padding: 40px 40px 40px 10px;
@@ -137,14 +163,14 @@ label, span {
   padding: 1.5rem;
 }
 .tipAmountContainer {
-  display:  flex;
+  display: flex;
   justify-content: space-between;
 }
 .tipAmount {
   display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 h5 {
   color: var(--White);
@@ -167,11 +193,8 @@ h2 {
   background-color: var(--Strong-cyan);
   color: var(--Very-dark-cyan);
   transition: all 0.3s;
-  
-
-  
-} 
+}
 .reset:hover {
   background-color: var(--Strong-cyan);
   opacity: 1;
- } 
+}
