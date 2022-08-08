@@ -125,10 +125,7 @@ span {
   color: var(--White);
   transition: all 0.4s;
 }
-/* .btnBillPercantage:focus  {
-  background-color: var(--Strong-cyan);
-  color: var(--Very-dark-cyan);
-} */
+
 .btnChoosen {
   background-color: var(--Strong-cyan);
   color: var(--Very-dark-cyan);
@@ -197,4 +194,10 @@ h2 {
 .reset:hover {
   background-color: var(--Strong-cyan);
   opacity: 1;
+}
+
+@media only screen and (max-width:600px) {
+  h2 {
+    font-size: 1.5rem;
+  }
 }

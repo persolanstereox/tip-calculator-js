@@ -24,16 +24,25 @@ function tipCalculation() {
 }
 tipCalculation();
 
+function changingBtnChoosen() {
+  for (let i = 0; i < percantageBtns.length; i++) {
+    if (percantageBtns[i].value != tip) {
+      percantageBtns[i].classList.remove('btnChoosen');
+    }
+  }
+}
+
 for (let i = 0; i < percantageBtns.length; i++) {
   percantageBtns[i].addEventListener('click', function () {
     tip = percantageBtns[i].value;
-    percantageBtns[i].classList.toggle('btnChoosen');
-    
+    percantageBtns[i].classList.add('btnChoosen');
+    changingBtnChoosen();
   });
 }
 
 customTip.addEventListener('change', function () {
   tip = customTip.value / 100;
+  changingBtnChoosen();
 });
 
 numberOfPeople.addEventListener('change', function () {
@@ -56,22 +65,22 @@ function calculateTip() {
     total.textContent = `$${totalAmount.toFixed(2)}`;
   }
 }
-if (bill.value > 0 && numberOfPeople.value > 0) {
-  bill.onsubmit();
-  numberOfPeople.onsubmit();
-  calculateTip();
-}
 
 function resetValues() {
   tip = 0;
   bill.value = ' ';
   numberOfPeople.value = ' ';
-  customTip.value = ' '
+  customTip.value = ' ';
   tipAmount.textContent = '$0.00';
   total.textContent = '$0.00';
-  if(numberOfPeople.classList.contains('outlineRed')) {
+  if (numberOfPeople.classList.contains('outlineRed')) {
     numberOfPeople.classList.remove('outlineRed');
     spanWhenZero.classList.add('hidden');
+  }
+  for (let i = 0; i < percantageBtns.length; i++) {
+    if (percantageBtns[i].classList.contains('btnChoosen')) {
+      percantageBtns[i].classList.remove('btnChoosen');
+    }
   }
 }
 bill.addEventListener('change', calculateTip);
