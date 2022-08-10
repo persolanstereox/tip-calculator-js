@@ -24,7 +24,7 @@ Users should be able to:
 ![](./design/desktop-design-empty.jpg)
 
 ### Links
-- Live Site URL: [Github page](https://your-live-site-url.com)
+- Live Site URL: [Github page](https://persolanstereox.github.io/tip-calculator-js/)
 
 ## My process
 
