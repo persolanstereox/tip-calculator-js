@@ -21,7 +21,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./design/desktop-design-empy.jpg)
+![](./design/desktop-design-empty.jpg)
 
 ### Links
 - Live Site URL: [Github page](https://your-live-site-url.com)
