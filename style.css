@@ -35,6 +35,7 @@ body {
   justify-content: center;
   flex-direction: column;
   padding: 5%;
+  overflow: hidden;
 }
 header {
   margin-bottom: 2rem;
@@ -57,7 +58,12 @@ section {
 .usersBills {
   padding: 40px 10px 40px 40px;
 }
-
+.left-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
 .Bill,
 .numberOfPeople {
   position: relative;
@@ -72,10 +78,9 @@ input {
   margin-top: 0.3rem;
   color: var(--Dark-grayish-cyan);
   padding-right: 5%;
-  
 }
 input:focus {
-  border:  solid  2px blue;
+  border: solid 2px blue;
   /* border-color: var(--Grayish-cyan); */
 }
 input::-webkit-outer-spin-button,
@@ -144,10 +149,10 @@ span {
   color: rgba(229, 51, 16, 0.796);
 }
 .outlineRed {
-  border:   rgba(229, 51, 16, 0.796) solid 2px;
+  border: rgba(229, 51, 16, 0.796) solid 2px;
 }
 .outlineRed:focus {
-  outline-color:  rgba(229, 51, 16, 0.796);
+  outline-color: rgba(229, 51, 16, 0.796);
 }
 .coutingBills {
   padding: 40px 40px 40px 10px;
@@ -158,6 +163,7 @@ span {
   background-color: var(--Very-dark-cyan);
   border-radius: 12px;
   padding: 1.5rem;
+  position: relative;
 }
 .tipAmountContainer {
   display: flex;
@@ -195,9 +201,100 @@ h2 {
   background-color: var(--Strong-cyan);
   opacity: 1;
 }
+@media only screen and (max-width: 730px) {
+  label,
+  span {
+    font-size: 0.6rem;
+  }
+  .Bill img,
+  .numberOfPeople img {
+    top: 58%;
+  }
+}
 
-@media only screen and (max-width:600px) {
+@media only screen and (max-width: 600px) {
   h2 {
     font-size: 1.5rem;
+  }
+  h5 {
+    font-size: 12px;
+  }
+  p {
+    font-family: 7px;
+  }
+}
+@media only screen and (max-width: 510px) {
+  .labelContainer label,
+  .labelContainer span {
+    font-size: 0.5rem;
+  }
+  .tipAmountContainer {
+    display: block;
+  }
+}
+
+/* MOBILE */
+
+@media only screen and (max-width: 420px) {
+  body {
+    padding: 0;
+    justify-content: flex-end;
+  }
+  main {
+    width: 100vw;
+    height: 85vh;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    flex-direction: column;
+  }
+  .usersBills {
+    height: 60%;
+  }
+  .coutingBills {
+    height: 40%;
+  }
+  .usersBills,
+  .coutingBills {
+    padding: 7%;
+    width: 100%;
+  }
+  .labelContainer label,
+  .labelContainer span,
+  label,
+  span {
+    font-size: 1rem;
+  }
+  .tipAmountContainer {
+    display: flex;
+  }
+  .reset {
+    position: absolute;
+    top: 70%;
+    left: 15%;
+    width: 70%;
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+@media only screen and (min-height: 750px) and (max-width: 500px) {
+  .labelContainer label,
+  .labelContainer span,
+  label,
+  span {
+    font-size: 1.4rem;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 12px;
+  }
+  input,
+  .btnContainer {
+    margin-top: 3%;
+  }
+  .Bill img,
+  .numberOfPeople img {
+    top: 66%;
   }
 }
